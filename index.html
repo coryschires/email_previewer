@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Email Previewer</title>
+
+<style type="text/css" media="screen">
+    body { font-family: helvetica, verdana, sans-serif; font-size: 14px; padding: 0 20px; }
+    h3 { font-size: 24px;}
+    form { width: 400px; float: left; margin-right: 50px;}
+    label { font-weight: bold; display: block; margin: 10px 0 3px; }
+    input, textarea { padding: 3px; border: thin #ccc solid; width: 200px; }
+    textarea { width: 350px; height: 200px;}
+    button { display: block; }
+    #preview_wrap { float: left; }
+    #preview { padding: 0 15px; background: #e0e0e0; border: dashed thin #333; width: 350px; min-height: 335px;}
+</style>
+
+<!-- javascripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="https://github.com/coryschires/email_previewer/raw/master/jquery.email_previewer.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+<script type="text/javascript" charset="utf-8">
+    $(document).ready(function() {
+        $('form').email_previewer({
+            'input#email': '#email_preview',
+            'input#subject': '#subject_preview',
+            'textarea#message': '#message_preview'
+        });
+    });
+</script>
+
+</head>
+<body>
+
+<a href="https://github.com/coryschires/email_previewer/">back to github</a>
+    <form>
+        <h3>Send me a message</h3>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        
+        <label for="subject">Subject</label>
+        <input type="subject" name="subject" id="subject">
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+
+        <button>Submit</button>
+    </form>
+    
+    <div id="preview_wrap">
+        <h3>Email Preview</h3>
+        <div id="preview">
+            <label>Email</label>
+            <div id="email_preview"></div>
+        
+            <label>Subject</label>
+            <div id="subject_preview"></div>
+
+            <label>Message</label>
+            <div id="message_preview"></div>
+        </div>
+    </div>
+</body>
+</html>
