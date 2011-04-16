@@ -32,7 +32,7 @@
         if (input.is('textarea')) {
           text = perserve_linebreaks(text);
         }
-        preview.text(text);
+        preview.html(text);
       }
       
       return this.each(function() {
