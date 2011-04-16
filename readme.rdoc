@@ -12,6 +12,6 @@ Invoke the plugin on any form element passing arguments in this format:
 
 The function takes any number of key-value pairs where both the key and value are CSS selectors. The key should be a selector specifying the form element where the user types. The value should be a selector specifying the div (or span or whatever) where you'd like the preview text to appear.
 
-== And a disclaimer.
+== Demo.
 
-I wrote this for use in a personal project and it works well. It's not the most fantastic, amazing, knock-your-socks-off plugin on the web but feel free to use it if you like.
+It's nothing too fancy, but here's a {live demo}[http://coryschires.github.com/email_previewer/].
